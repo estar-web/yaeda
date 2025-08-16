@@ -1,0 +1,303 @@
+@charset "UTF-8";
+
+/* ===================================
+大カテゴリ
+=================================== */
+/* 中カテゴリ
+==============================　*/
+/* 小カテゴリ、コメント */
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 600px) {}
+
+@media screen and (max-width: 320px) {}
+
+
+.footer_top {
+    background: rgba(222, 83, 41, 0.20);
+    backdrop-filter: blur(50px);
+}
+
+.showroom {
+    padding-top: 56px;
+    padding-bottom: 120px;
+}
+
+.showroom_h2 {
+    color: #1C1918;
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    /* 60px */
+    letter-spacing: .05em;
+    padding-top: 40px;
+    position: relative;
+}
+
+.showroom_h202 {
+    color: #1C1918;
+    text-align: center;
+    font-family: "Noto Sans JP", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    /* 14px */
+}
+
+.showroom_h2::before {
+    content: "｜";
+    position: absolute;
+    top: 0px;
+    font-size: 32px;
+    font-weight: 400;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ===================================
+お問い合わせ
+=================================== */
+.showroom .shop {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    border: 1px solid #1C1918;
+    background: rgba(255, 255, 255, 0.50);
+    margin: auto;
+    cursor: pointer;
+    width: 460px;
+    height: 92.45px;
+    padding: 26px 45px;
+    margin-top: 40px;
+    transition: all .5s;
+}
+
+.shop:hover {
+    transition: 0.3s;
+    opacity: .5;
+}
+
+.shop_a {
+    width: 100%;
+    height: 100%;
+}
+
+.showroom_contact {
+    padding: 50px;
+    background: #FFF;
+    max-width: 990px;
+    margin: auto;
+}
+
+.showroom_contact_p {
+    color: var(--, #1C1918);
+    text-align: center;
+    font-family: "Noto Sans JP", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2;
+    /* 32px */
+    letter-spacing: 0.05em;
+}
+
+.shop::before {
+    content: "";
+    background-image: url(../img/showroom/yaji_black.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    right: 43px;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
+
+.btn_text {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: #1C1918;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    /* 38px */
+    letter-spacing: .05em;
+}
+
+.footer_p {
+    color: #1C1918;
+    font-family: "Noto Sans JP", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 1.8;
+    /* 180% */
+    letter-spacing: 0.05em;
+    padding-right: 33px;
+}
+
+.item_price {
+    color: var(--, #1C1918);
+    font-family: "Noto Sans JP", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.8;
+    /* 36px */
+    letter-spacing: .05em;
+}
+
+.showroom .item_price02 {
+    color: #1C1918;
+    font-family: "Noto Sans JP", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2;
+    /* 32px */
+    letter-spacing: 0.05em;
+    margin-top: 40px;
+    margin-bottom: 23px;
+}
+
+.item_text {
+    margin-bottom: 50px;
+}
+
+/* .showroom .swiper-slide.swiper-slide-active {
+    width: 460px !important;
+} */
+.showroom .item_detail_area {
+    margin-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.showroom .item_detail {
+    background-color: transparent;
+    padding-top: 0;
+}
+
+.showroom .item_detail .right_box {
+    background-color: transparent;
+}
+
+.showroom .item_detail .right_box a {
+    color: #DE5329;
+    text-decoration: underline;
+}
+
+.showroom .inner02 {
+    max-width: 990px;
+}
+
+.showroom .item_detail_area .flex {
+    max-height: none;
+}
+
+.showroom .flex .left_box {
+    display: block;
+    max-width: 460px;
+    width: 47%;
+    margin: 0;
+    /* margin-top: -54px; */
+}
+
+.showroom .flex .right_box {
+    margin: 0;
+}
+
+.showroom .item_detail_area .flex {
+    margin-top: 54px;
+    /* align-items: center; */
+    gap: 40px;
+}
+
+.showroom .choice-btn li img {
+    padding: 5px;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
+
+
+@media screen and (max-width: 768px) {
+    .showroom .flex .left_box {
+        width: 100%;
+        margin: auto;
+    }
+
+    .right_box .item_title {
+        margin-top: 30px;
+    }
+
+
+    .showroom .showroom_contact {
+        margin-top: 50px;
+        padding: 20px;
+    }
+
+    .showroom .shop {
+        width: 60vw !important;
+    }
+
+    .showroom .showroom_contact_p {
+        text-align: left;
+    }
+
+    .showroom .item_detail_area .flex {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 624px) {
+    .showroom .footer_p {
+        font-size: 12px;
+    }
+
+    .showroom .btn_text {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .showroom .shop {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .showroom .shop {
+        width: 100% !important;
+        height: auto !important;
+        padding: 15px 15px !important;
+        ;
+    }
+
+    .showroom .btn_text {
+        font-size: 24px;
+    }
+
+    .showroom .footer_p {
+        margin-right: 0;
+    }
+
+    .showroom .shop::before {
+        right: 20px;
+    }
+}

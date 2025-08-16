@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+/* ===================================
+大カテゴリ
+=================================== */
+/* 中カテゴリ
+==============================　*/
+/* 小カテゴリ、コメント */
+
+
+
+/* ===================================
+会社概要
+=================================== */
+.company {
+    padding-bottom: 77px;
+    padding-top: 60px;
+}
+
+.company .overview_flex_dl {
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+    gap: 10px;
+    background: #FFF;
+    max-width: 1000px;
+    margin: 50px auto;
+
+    color: #1C1918;
+    font-family: "Noto Sans JP", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2;
+    /* 32px */
+    letter-spacing: 0.05em;
+}
+
+.overview_flex {
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gry, #D9E5E8);
+}
+
+.overview_flex_dt {
+    width: 130px;
+}
+
+.overview_flex_dd {
+    width: calc(100% - 130px);
+}
+
+.overview_flex_dt span {
+    border-left: 1px solid #DD5D21;
+    padding-left: 10px;
+}
+
+.ifram_area.type02 {
+    margin-top: 32px;
+}
+
+.ifram_area iframe {
+    width: 440px;
+    height: 248px;
+}
+
+.iframe_a {
+    color: #1C1918;
+    font-family: "Noto Sans JP", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2;
+    /* 24px */
+    letter-spacing: 0.05em;
+    padding-right: 16px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #1C1918;
+    transition: all .5s;
+    position: relative;
+}
+
+.iframe_a::after {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    width: 12px;
+    height: 12px;
+    right: 0;
+    background: url(../img/company/company_map_icon.svg) no-repeat;
+    background-size: contain;
+}
+
+.iframe_a:hover {
+    opacity: .5;
+}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {
+    .company .overview_flex {
+        flex-direction: column;
+    }
+
+    .company.overview_flex_dt {
+        width: 100%;
+    }
+
+    .company .overview_flex_dd {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {}
+
+@media screen and (max-width: 450px) {
+    .company .overview_flex_dl {
+        padding: 15px !important;
+        font-size: 14px !important;
+    }
+}

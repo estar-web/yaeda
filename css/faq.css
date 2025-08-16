@@ -1,0 +1,512 @@
+@charset "UTF-8";
+
+/* ===================================
+大カテゴリ
+=================================== */
+/* 中カテゴリ
+==============================　*/
+/* 小カテゴリ、コメント */
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 600px) {}
+
+@media screen and (max-width: 320px) {}
+
+/* ===================================
+共通
+=================================== */
+.pc_bread {
+    display: flex;
+}
+
+.sp_bread {
+    display: none;
+}
+
+.c-bread {
+    background-color: transparent;
+    margin: 0;
+    padding-left: 40px;
+}
+
+
+.faq-main {
+    margin-top: -40px;
+}
+
+.c-inner-l {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ===========================
+List 
+============================= */
+
+.ly_faqSection {
+    background-color: #EFEAEA;
+    padding: 66px 1.25rem 7.5rem 1.25rem;
+}
+
+.ly_faqSection_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    gap: 1.5rem;
+    max-width: 62.5rem;
+    margin-inline: auto;
+}
+
+/* Navi
+=================*/
+
+.ly_cateNaviWrapper {
+    max-width: 12.5rem;
+    width: 100%;
+}
+
+.el_cateNaviWrapper_ttl {
+    color: #1C1918;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    text-transform: uppercase;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.2px;
+    background-color: #fff;
+    padding: 0.625rem .5rem;
+    margin-bottom: 1.25rem;
+}
+
+.ly_cateNaviList {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 1.25rem;
+}
+
+.bl_cateNaviList_item {
+    padding-bottom: .875rem;
+    border-bottom: 1px solid #fff;
+}
+
+.el_cateNaviList_item_btn {
+    position: relative;
+    display: block;
+    width: 100%;
+    color: #1C1918;
+    font-family: "Noto Sans JP";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    padding-left: 1.5625rem;
+    transition: .5s;
+}
+
+.el_cateNaviList_item_btn_arrow {
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    background-image: url(../img/contact/open-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 10px;
+    aspect-ratio: 1 / 1;
+    fill: #1C1918;
+}
+
+@media (hover : hover) {
+    .el_cateNaviList_item_btn:hover {
+        color: #DE5329;
+        transition: .5s;
+    }
+
+    .el_cateNaviList_item_btn:hover .el_cateNaviList_item_btn_arrow {
+        fill: #DE5329;
+    }
+}
+
+/* List-item
+=========================*/
+.ly_faqList {
+    display: flex;
+    flex-flow: column;
+    gap: 3.75rem;
+    width: 100%;
+}
+
+.ly_faqList_item {
+    display: flex;
+    flex-flow: column;
+    gap: 2.5rem;
+    border-bottom: 1px solid #1C1918;
+    padding-bottom: 3.75rem;
+    max-width: 640px;
+    width: 100%;
+}
+
+.bl_taxFaqList_item {
+    border: none;
+}
+
+.el_faqList_item_ttl {
+    color: #1C1918;
+    font-family: "Noto Sans JP";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.05em;
+}
+
+.ly_faqContetsList {
+    display: flex;
+    flex-flow: column;
+    gap: 1.25rem;
+}
+
+.bl_faqContetsList_item_btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.25rem;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 6px;
+    transition: .3s;
+}
+
+@media (hover: hover) {
+    .bl_faqContetsList_item_btn:hover {
+        opacity: .5;
+        transition: .3s;
+    }
+}
+
+.el_faqContetsList_item_btn_head {
+    color: #1C1918;
+    font-family: "Yanone Kaffeesatz";
+    padding-top: 2px;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.05em;
+}
+
+.el_faqContetsList_item_btn_txt {
+    color: #1C1918;
+    font-family: "Noto Sans JP";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: .05em;
+}
+
+.bl_faqCateArchiveBtn {
+    width: fit-content;
+    margin-left: auto;
+}
+
+
+@media screen and (max-width: 768px) {
+    .ly_faqSection_inner {
+        flex-flow: column;
+        flex-direction: column-reverse;
+        gap: 80px;
+    }
+
+
+    .ly_faqList_item {
+        max-width: 100%;
+        gap: 1.5rem;
+        padding-bottom: 2.75rem;
+    }
+
+    .ly_cateNaviWrapper {
+        max-width: 100%;
+    }
+
+    .el_faqContetsList_item_btn_txt {
+        font-size: 1rem;
+        padding-top: 3px;
+    }
+
+    .ly_faqList {
+        gap: 2.75rem;
+    }
+}
+
+
+/*======================
+記事ページ
+========================*/
+
+.singleFaq-main {
+    padding-top: 30px;
+    background-color: #EFEAEA;
+}
+
+.ly_faqPostSection {
+    max-width: 640px;
+    width: 100%;
+}
+
+.ly_faqPostWrapper {
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 2.5rem;
+    width: 100%;
+}
+
+.ly_faqPostWrapper_inner {
+    padding: 1.875rem;
+}
+
+.el_postCateTtl {
+    position: relative;
+    color: #1C1918;
+    font-family: "Noto Sans JP";
+    font-size: .875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+    margin-bottom: 2.5rem;
+    padding-left: 36px;
+}
+
+.el_postCateTtl::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    height: 1px;
+    width: 100%;
+    max-width: 26px;
+    background-color: #000;
+}
+
+.bl_faqPostContets {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.bl_faqPostContets_ttl {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    margin-bottom: 1.25rem;
+}
+
+.bl_faqPostContets_ttl_head {
+    display: block;
+    color: var(--black, #1C1918);
+    font-family: "Yanone Kaffeesatz";
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    padding-top: 3px;
+}
+
+.bl_faqPostContets_ttl_txt {
+    color: #1C1918;
+    font-family: "Noto Sans JP";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: .05rem;
+}
+
+.bl_faqPostContets_txt {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.875rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+}
+
+.el_faqPostContets_txt_head {
+    color: #DE5329;
+    font-family: "Yanone Kaffeesatz";
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    padding-top: 4px;
+}
+
+.el_faqPostContets_txt_txt {
+    width: 100%;
+    color: #1C1918;
+    font-family: "Noto Sans JP";
+    font-size: .875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+}
+
+.ly_faqPostArchiveBtnWrapper {
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.c-edit h2 {
+    border-bottom: 2px solid #DE5329;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 80px;
+    padding: 0 10px 10px;
+}
+
+.c-edit h2:first-child {
+    margin: 0;
+}
+
+.c-edit h2+p {
+    margin-top: 10px;
+}
+
+.c-edit h3 {
+    font-size: 14px;
+    line-height: 2;
+    font-weight: 700;
+    margin-top: 60px;
+    padding-left: 70px;
+    position: relative;
+}
+
+.c-edit h3:before {
+    content: "";
+    width: 52px;
+    height: 1px;
+    background: #707070;
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
+.c-edit h3+p {
+    margin-top: 10px;
+}
+
+.c-edit h4 {
+    font-size: 14px;
+    background: #EFEAEA;
+    margin-top: 40px;
+    padding: 1px 20px;
+}
+
+.c-edit h4+p {
+    margin-top: 10px;
+}
+
+.c-edit p {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.c-edit p+p {
+    margin-top: 15px;
+}
+
+.c-edit a {
+    color: #DE5329;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+.c-edit a:hover {
+    opacity: 0.5;
+}
+
+.c-edit mark {
+    background: linear-gradient(transparent 60%, #FCF4B5 60%);
+    font-weight: 700;
+}
+
+.c-edit ul {
+    border: 1px solid #AAAAAA;
+    font-size: 13px;
+    padding: 15px 20px;
+    margin-top: 40px;
+}
+
+.c-edit ul li {
+    position: relative;
+    padding-left: 13px;
+}
+
+.c-edit ul li:before {
+    content: "・";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.c-edit ul li+li {
+    margin-top: 5px;
+}
+
+.c-edit img {
+    margin-top: 15px;
+}
+
+
+@media screen and (max-width:768px) {
+
+    .textfv_ttlbox h1 {
+        text-align: center;
+    }
+
+    .ly_faqPostWrapper {
+        max-width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .bl_faqPostContets {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .textfv_ttlbox h1 {
+        text-align: center;
+    }
+
+    .bl_faqPostContets_txt {
+        flex-flow: column;
+        gap: .5rem;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .c-bread {
+        padding-left: 0;
+    }
+}

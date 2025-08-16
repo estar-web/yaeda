@@ -1,0 +1,389 @@
+@charset "UTF-8";
+
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 600px) {}
+
+@media screen and (max-width: 320px) {}
+
+root {
+    --textColor: #1C1918;
+}
+
+.c-bread {
+    background-color: transparent;
+    margin: 0;
+    padding-left: 40px;
+}
+
+/*=================================
+Form
+==================================*/
+
+.form-main {
+    margin-top: -40px;
+}
+
+
+.c-inner-l {
+    position: relative;
+    z-index: 1;
+}
+
+.ly_contactFormWrapper {
+    background-color: #EFEAEA;
+    padding: 65px 1.25rem 7.5rem;
+}
+
+.ly_checkList input {
+    margin: 0 !important;
+}
+
+.mwform-checkbox-field-text {
+    color: #1C1918;
+    font-family: "Noto Sans JP";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.mwform-radio-field-text {
+    color: #1C1918;
+    font-family: "Noto Sans JP";
+    font-size: .875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.ly_contactFormWrapper_inner {
+    display: flex;
+    flex-flow: column;
+    gap: 3.75rem;
+    max-width: 50rem;
+    margin-inline: auto;
+}
+
+.ly_contactFormWrapper_inner form {
+    display: flex;
+    flex-flow: column;
+    gap: 3.75rem;
+    max-width: 50rem;
+    margin-inline: auto;
+}
+
+.bl_contactConfirmSection {
+    width: 100%;
+    background-color: #fff;
+    padding: 1.875rem 3.125rem;
+}
+
+.el_contactConfirmSection_ttl {
+    color: #1C1918;
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    margin-bottom: 2.5rem;
+}
+
+.el_contactConfirmSection_ttl .sp_br {
+    display: none;
+}
+
+.bl_confirmList {
+    display: flex;
+    flex-flow: column;
+    gap: 1.25rem;
+}
+
+.el_confirmList_item p {
+    color: var(--black, #1C1918);
+    font-family: "Noto Sans JP";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: .05em;
+    padding-left: 1rem;
+    border-left: 1px solid #DE5329;
+}
+
+.el_confirmList_item p a {
+    color: #DE5329;
+    font-family: "Noto Sans JP";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: .05em;
+    text-decoration-line: underline;
+    transition: .3s;
+}
+
+@media (hover : hover) {
+    .el_confirmList_item p a:hover {
+        opacity: .5;
+        transition: .3s;
+    }
+}
+
+
+/* フォーム共通 */
+.ly_contactFormWrapper_inner form input,
+.ly_contactFormWrapper_inner form label {
+    cursor: pointer;
+}
+
+.bl_formItemWrapper {
+    width: 100%;
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+.bl_formItemWrapper input {
+    margin-right: 0;
+}
+
+.bl_formItemTtl {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    margin-bottom: 10px;
+}
+
+.bl_fromTextTtl {
+    margin-bottom: 10px;
+}
+
+.el_formItemTtl_txt {
+    display: block;
+    color: #1C1918;
+    font-family: "Noto Sans JP";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.el_formItemTtl_required {
+    display: block;
+    color: #DE5329;
+    font-family: "Noto Sans JP";
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.8;
+}
+
+.bl_checkList_item {
+    display: grid;
+    grid-template-columns: 240px 240px;
+    gap: 1.25rem;
+}
+
+.bl_checkList_item span {
+    margin-left: 0 !important;
+    max-width: 600px;
+}
+
+.bl_checkList_item .mwform-radio-field label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.625rem;
+}
+
+.bl_checkList_item .mwform-checkbox-field label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.625rem;
+}
+
+.el_checkList_item_checkBox {
+    appearance: none;
+    display: block;
+    margin: 0;
+    top: 0;
+    left: 0;
+    min-width: 17px;
+    height: 17px;
+    margin-top: 6px;
+    margin-right: 0;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.el_checkList_item_checkBox:checked {
+    position: relative;
+    background-color: #1C1918;
+}
+
+.el_checkList_item_checkBox:checked::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 8px;
+    height: 5px;
+    rotate: -45deg;
+    translate: -50% -50%;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.el_checkList_item_labelTxt {
+    position: relative;
+    cursor: pointer;
+    color: #1C1918;
+    font-family: "Noto Sans JP";
+    font-size: .875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.bl_formItemTextArea {
+    display: block;
+    width: 100%;
+    padding: 1.25rem;
+    background-color: #fff;
+    border-radius: 6px;
+    height: 176px;
+    font-family: "Noto Sans JP";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+input:-webkit-autofill {
+    box-shadow: 0 0 0 1000px white inset;
+}
+
+.mwform-checkbox-field input {
+    margin: 0 !important;
+}
+
+.bl_formItemText {
+    width: 100%;
+    padding: 1.25rem 1rem;
+    background-color: #fff;
+    border-radius: 6px;
+    font-family: "Noto Sans JP";
+    height: 46px;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.ly_pribacyWrapper_txtLinkWrapper {
+    margin-bottom: 1.875rem;
+    text-align: center;
+    color: #1C1918;
+    font-family: "Noto Sans JP";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.ly_pribacyWrapper_txtLinkWrapper .sp_br {
+    display: none;
+}
+
+.ly_pribacyWrapper_txtLink {
+    color: #DE5329;
+    font-family: "Noto Sans JP";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    text-decoration-line: underline;
+    transition: .3s;
+}
+
+@media (hover : hover) {
+    .ly_pribacyWrapper_txtLink:hover {
+        opacity: .5;
+        transition: .3s;
+    }
+}
+
+.bl_pribacyWrapper_checkItem {
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.bl_sbmitBtnWrapper input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    max-width: 15rem;
+    margin-inline: auto;
+    background-color: #1C1918;
+    color: #FFF;
+    font-family: "Noto Sans JP";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 100%;
+    padding-top: 1.0625rem;
+    border-radius: 100px;
+    padding-bottom: 1.0625rem;
+    margin-right: auto;
+    transition: .3s;
+}
+
+@media (hover :hover) {
+    .bl_sbmitBtnWrapper input:hover {
+        opacity: .5;
+        transition: .3s;
+    }
+}
+
+
+.el_privacyItem {
+    display: block;
+}
+
+@media screen and (max-width: 540px) {
+
+    .ly_contactFormWrapper_inner form {
+        gap: 30px;
+    }
+
+
+    .bl_checkList_item {
+        grid-template-columns: auto;
+    }
+
+    .bl_contactConfirmSection {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    .ly_pribacyWrapper_txtLinkWrapper .sp_br {
+        display: block;
+    }
+}
+
+@media screen and (max-width : 425px) {
+
+    .el_contactConfirmSection_ttl .sp_br {
+        display: block;
+    }
+
+}

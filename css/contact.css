@@ -1,0 +1,246 @@
+@charset "UTF-8";
+
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 600px) {}
+
+@media screen and (max-width: 320px) {}
+
+root {
+    --textColor: #1C1918;
+}
+
+/*===========================
+Contact
+============================*/
+
+.contact-main {
+    margin-top: -40px;
+}
+
+.c-inner-l {
+    position: relative;
+    z-index: 1;
+}
+
+.c-bread {
+    background-color: transparent;
+    margin: 0;
+    padding-left: 40px;
+}
+
+
+/* Page */
+
+.ly_frequentFaQSection {
+    padding: 56px 1.25rem 7.5rem;
+    background-color: #EFEAEA;
+}
+
+.ly_frequentFaQSection_inner {
+    max-width: 62.5rem;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.bl_frequentFaQSectionTtl {
+    width: fit-content;
+    margin-inline: auto;
+    margin-bottom: 2.5rem;
+}
+
+.bl_frequentFaQSectionTtl_txt {
+    position: relative;
+    padding-top: 2.375rem;
+    color: var(--textColor);
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 0.625rem;
+}
+
+.bl_frequentFaQSectionTtl_txt::after {
+    content: "";
+    width: 1px;
+    height: 32px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50% 0;
+    background-color: #1C1918;
+}
+
+.bl_frequentFaQSectionTtl_subTxt {
+    color: var(--textColor);
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: 0.05em;
+}
+
+.ly_faqItemWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    height: 100%;
+    gap: 1.5rem;
+}
+
+.ly_faqWrapperList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.bl_faqWrapperList_item {
+    display: flex;
+    flex-flow: column;
+    gap: 2.5rem;
+    padding: 1.875rem;
+    background-color: #ffff;
+}
+
+.el_faqWrapper_itemTtl {
+    color: var(--textColor);
+    font-family: "Noto Sans JP";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.05em;
+}
+
+.ly_faqContentsList {
+    display: flex;
+    flex-flow: column;
+    gap: 1.5rem;
+}
+
+.el_faqContentsList_item_anker {
+    position: relative;
+    display: block;
+    color: var(--textColor);
+    font-family: "Noto Sans JP";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    padding-left: 2.125rem;
+    transition: all ease-in .2s;
+}
+
+
+.el_faqContentsList_item_anker::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../img/contact/closeArrow.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    aspect-ratio: 1/1;
+    max-width: 1.5rem;
+    width: 100%;
+}
+
+@media (hover : hover) {
+    .el_faqContentsList_item_anker:hover {
+        opacity: .5;
+        transition: all ease-in .2s;
+    }
+}
+
+.ly_faqviewAllBtnWrapper {
+    width: fit-content;
+    margin-left: auto;
+}
+
+.ly_formLinkWrapper {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.el_formLinkWrapper_ttl {
+    color: var(--textColor);
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 2;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.625rem;
+}
+
+.el_formLinkWrapper_ttlSubtxt {
+    color: var(--textColor);
+    text-align: center;
+    font-family: "Noto Sans JP";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: 0.05em;
+    margin-bottom: .625rem;
+}
+
+.bl_formLinkWrapper_btnWrpper {
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.sp_br {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .ly_faqWrapperList {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .sp_br {
+        display: block;
+    }
+
+    .bl_frequentFaQSectionTtl_txt {
+        font-size: 1.25rem;
+    }
+
+    .bl_frequentFaQSectionTtl_subTxt {
+        font-size: .875rem;
+    }
+
+    .ly_faqContentsList{
+        gap: 1rem;
+    }
+
+    .el_faqWrapper_itemTtl{
+        font-size:1.125rem ;
+    }
+
+    .bl_faqWrapperList_item{
+        gap: 1.5rem;
+        padding: 1.875rem 1rem;
+    }
+
+    .el_faqContentsList_item_anker{
+        padding-left: 1.5rem;
+    }
+}
