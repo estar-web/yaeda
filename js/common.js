@@ -1,6 +1,6 @@
 jQuery(function () {
   //スムーススクロール
-  $('a[href^="#"]').click(function() {
+  $('a[href^="#"]').click(function () {
     // .cn-buttonクラスがついた要素をクリックした場合は処理を中断する
     if ($(this).hasClass("cn-button")) {
       return;
@@ -23,9 +23,9 @@ jQuery(function () {
   });
 
 
-  $(function(){
+  $(function () {
     if (window.matchMedia('(min-width: 769px)').matches) {
-      jQuery(window).on("scroll", function() {
+      jQuery(window).on("scroll", function () {
         documentHeight = jQuery(document).height();
         scrollPosition = jQuery(this).height() + jQuery(this).scrollTop() - 100;
         footerHeight = jQuery(".footer_bottom").innerHeight();
@@ -42,7 +42,7 @@ jQuery(function () {
         }
       });
     } else if (window.matchMedia('(max-width:768px)').matches) {
-      jQuery(window).on("scroll", function() {
+      jQuery(window).on("scroll", function () {
         documentHeight = jQuery(document).height();
         scrollPosition = jQuery(this).height() + jQuery(this).scrollTop() - 58;
         footerHeight = jQuery(".footer_bottom").innerHeight();
@@ -63,7 +63,7 @@ jQuery(function () {
 
 
   // TOPへ戻るボタン
-  jQuery(window).on("scroll", function() {
+  jQuery(window).on("scroll", function () {
     documentHeight = jQuery(document).height();
     scrollPosition = jQuery(this).height() + jQuery(this).scrollTop() - 100;
     footerHeight = jQuery(".footer_bottom").innerHeight();
@@ -81,23 +81,23 @@ jQuery(function () {
   });
 
 
-  $(function() {
+  $(function () {
     // 変数にクラスを入れる
     var btn = $('.pagetop');
     var bnr = $('.footer___bnr');
     //スクロールしてページトップから100に達したらボタンを表示
-    $(window).on('load scroll', function(){
-      if($(this).scrollTop() > 100) {
+    $(window).on('load scroll', function () {
+      if ($(this).scrollTop() > 100) {
         btn.addClass('active');
         bnr.addClass('active');
-      }else{
+      } else {
         btn.removeClass('active');
         bnr.removeClass('active');
       }
     });
 
     //スクロールしてトップへ戻る
-    btn.on('click',function () {
+    btn.on('click', function () {
       $('body,html').animate({
         scrollTop: 0
       });
@@ -105,7 +105,7 @@ jQuery(function () {
   });
 
   $(window).scroll(function () {
-    if($(window).scrollTop() > 20) {
+    if ($(window).scrollTop() > 20) {
       $('#header').addClass('fixed');
     } else {
       $('#header').removeClass('fixed');
@@ -113,19 +113,19 @@ jQuery(function () {
   });
 
   // ページが読み込まれた後に実行される処理
-  $(document).ready(function() {
+  $(document).ready(function () {
     // ボタンがクリックされた時の処理
-    $('.bnr_right-bottom_close').click(function() {
-        // 'bnr_right-bottom' のopacityを0にする
-        $('.bnr_right-bottom').css('opacity', '0');
+    $('.bnr_right-bottom_close').click(function () {
+      // 'bnr_right-bottom' のopacityを0にする
+      $('.bnr_right-bottom').css('opacity', '0');
     });
   });
 
 
   // バナーの表示（画面の下の方で非表示）
   var $scrollEle = $('.ly_banner_area');
-  function scrollHiddenSwitch(){
-    $(window).on('scroll', function() {
+  function scrollHiddenSwitch() {
+    $(window).on('scroll', function () {
       var scrollTop = $(this).scrollTop();
       var docHeight = $(document).height();
       var winHeight = $(window).height();
@@ -141,6 +141,15 @@ jQuery(function () {
   scrollHiddenSwitch();
 });
 
+// 375px未満はVPを固定
 
-
+const viewport = document.querySelector('meta[name="viewport"]');
+function switchViewport() {
+  const value = window.outerWidth > 375 ? "width=device-width,initial-scale=1" : "width=375";
+  if (viewport.getAttribute("content") !== value) {
+    viewport.setAttribute("content", value);
+  }
+}
+addEventListener("resize", switchViewport, false);
+switchViewport();
 

@@ -1,0 +1,557 @@
+/* コンポーネント */
+.c-title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: "Inter", sans-serif;
+  color: #1B1918;
+}
+
+.c-title__jp {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.c-title__eg {
+  font-size: clamp(4rem, 2.206rem + 7.65vw, 8.75rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.c-btn--black {
+  background-color: #1b1918;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 100px;
+  padding: 10px 24px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.6;
+  transition: 0.3s;
+  gap: 10px;
+}
+
+/* インナー */
+.l-inner {
+  width: min(100%, calc(1328px + 20px * 2));
+  margin-inline: auto;
+  padding-inline: 20px;  
+}
+
+
+/*ヘッダー*/
+.po-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 30px 56px;
+  z-index: 1;
+}
+
+.po-header__inner {}
+
+
+
+/* ファーストビュー */
+.po-fv {
+  height: 800px;
+  background: transparent url(../img/porta/bg-fv.png) no-repeat center center / cover;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.po-fv__contents {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.po-fv__title {
+  font-size: clamp(2rem, 1.213rem + 3.36vw, 4rem);
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.po-fv__date {
+  font-size: clamp(7rem, 4.836rem + 9.23vw, 12.5rem);
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  margin-top: 8px;
+}
+
+.po-fv__countdown {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+  width: 563px;
+}
+
+.po-fv__line {
+  height: inherit;
+  width: 1px;
+  background-color: #fff;
+}
+
+.po-fv__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: calc((100% - 65px * 3) / 4);
+}
+
+.po-fv__num {
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(2.25rem, 0.774rem + 6.3vw, 6rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.po-fv__unit {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.po-fv__text {
+  margin-top: 80px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  line-height: 1.6;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.po-fv__cta {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  padding: 32px;
+  border-radius: 16px 0 0 0;
+  background: #FDFEF6;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+}
+
+.po-fv__btn {
+  border-radius: 100px;
+  background-color: #9CCAA9;
+  width: 100%;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.po-fv__copy {
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.po-fv__link {
+  text-decoration: underline;
+}
+
+.po-fv__scroll {
+  display: inline-block;
+  position: absolute;
+  bottom: 30px;
+  left: 56px;
+  padding: 10px 10px 110px;
+  overflow: hidden;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-decoration: none;
+  writing-mode: vertical-lr;
+  z-index: 1;
+}
+
+.po-fv__scroll::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  height: 100px;
+  background: rgba(255, 255, 255, .4);
+}
+
+.po-fv__scroll::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  height: 100px;
+  background: #fff;
+  animation: sdl 2.0s ease-out infinite;
+}
+
+@keyframes sdl {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+
+  50% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+
+  50.1% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+
+  100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%;
+  }
+}
+
+/* ポルタについて */
+.po-about {
+  padding-block: 120px 240px;
+  position: relative;
+}
+
+.po-about::after {
+  content: "";
+  width: 100vw;
+  aspect-ratio: 1440 / 200;
+  background: transparent url(../img/porta/deco-about.png) no-repeat center center / contain;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.po-about__body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 185px;
+}
+
+.po-about__text {
+  color: #1B1918;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.po-about__movie {
+  width: 100%;
+  aspect-ratio: 1328 / 747;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 80px;
+}
+
+.po-about__movie iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.po-spec {
+  padding-block: 120px 240px;
+  background-color: #D8F0DC;
+  position: relative;
+  margin-top: -1px;
+}
+
+.po-spec::after {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  aspect-ratio: 1440 / 199;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent url(../img/porta/deco-spec.png) no-repeat center center / contain;
+}
+
+.po-spec__contents {
+  width: min(100%, 1080px);
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  color: #1B1918;
+  font-family: "Inter", sans-serif;
+  margin-top: 80px;
+}
+
+.po-spec__item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+}
+
+.po-spec__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.po-spec__wrap {
+  display: flex;
+  padding-bottom: 24px;
+  padding-left: 8px;
+  gap: 16px;
+  align-items: flex-start;
+  border-bottom: 1px solid #1B1918;
+}
+
+.po-spec__label {
+  width: 160px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+.po-spec__data {
+  line-height: 2;
+  width: calc(100% - 160px - 16px);
+}
+
+.po-spec__text {
+  line-height: 2;
+}
+
+.po-story {
+  padding-block: 120px 160px;
+}
+
+.po-story__contents {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 64px;
+}
+
+.po-story__item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #1B1918;
+  font-family: "Inter", sans-serif;
+}
+
+.po-story__num {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.po-story__thumbnail {
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 400 / 267;
+}
+
+.po-story__thumbnail img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.po-story__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.po-story__content {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.po-story__link {
+  margin-top: 80px;
+  width: min(100%, 254px);
+  margin-inline: auto;
+}
+
+.l-footer {}
+
+.l-footer__title {
+  color: #1B1918;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(6.5rem, 0.458rem + 25.78vw, 22.5rem);
+  font-weight: 700;
+  line-height: 1;
+  width: 100%;
+  text-align: center;
+  translate: 0 50px;
+}
+
+.l-footer__copyright {
+  background-color: #1B1918;
+  text-align: center;
+  padding-block: 32px;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.6;
+  font-size: 12px;
+}
+
+.u-show{
+  display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .c-title__jp{
+    font-size: 14px;
+  }
+  .l-footer__title{
+    translate: 0 14px;
+  }
+  .po-fv {
+    height: 700px;
+    background-image: url(../img/porta/bg-fv-sp.png);
+  }
+
+  .po-fv__contents{
+    width: 100%;
+  }
+
+  .po-fv__countdown {
+    gap: 2px;
+    width: 100%;
+  }
+
+  .po-fv__item {
+    width: calc((100% - 20px * 2) / 4);
+  }
+
+  .po-fv__unit {
+    font-size: 14px;
+  }
+
+  .po-fv__text{
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .po-fv__text::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+  }
+
+  .po-fv__cta{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: 12px 20px;
+    gap: 8px;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    translate: 0 100%;
+    transition: translate 0.3s ease-out 0s;
+  }
+
+  .po-fv__cta.add-show{
+    translate: 0 0;
+  }
+
+  .po-fv__copy{
+    font-size: 11px;
+  }
+
+  .po-fv__scroll{
+    left: initial;
+    right: 20px;
+    bottom: 20px;
+  }
+  
+  .po-about{
+    padding-block: 64px 96px;
+  }
+
+  .po-about__movie{
+    margin-top: 48px;
+  }
+
+  .po-about__body {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .po-about__text{
+    font-size: 14px;
+  }
+
+  .po-spec{
+    padding-block: 64px 96px;
+  }
+
+  .po-spec__contents{
+    margin-top: 48px;
+    margin-left: 0;
+  }
+
+  .po-spec__item{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .po-spec__list {
+    gap: 16px;
+  }
+  
+  .po-spec__wrap {
+  gap: 4px;
+  flex-direction: column;
+  padding-bottom: 16px;
+  }
+  
+  .po-spec__label {
+  width: 100%;
+}
+
+.po-spec__data {
+    width: 100%;
+  
+  }
+  
+  
+
+  .u-show{
+    display: block;
+  }
+}

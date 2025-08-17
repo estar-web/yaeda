@@ -11,7 +11,7 @@
     <div class="p-rule">
         <div class="p-rule__wrap">
             <p class="p-rule__text">最新型電動バイク「PORTA」登場</p>
-            <a href="<?php echo home_url(); ?>/kickboard/" class="p-rule__link">
+            <a href="<?php echo home_url(); ?>/porta/" class="p-rule__link">
                 詳細を見る
             <img src="<?php echo get_template_directory_uri(); ?>/img/top/icon-btn.svg" alt="アイコン：右矢印" width="20" height="20" loading="lazy" decoding="async">
             </a>

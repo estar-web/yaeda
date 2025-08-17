@@ -179,3 +179,28 @@ function render_flex_item_content()
 }
 // ショートコードを登録
 add_shortcode('flex_item_content', 'render_flex_item_content');
+
+/* カウントダウン */
+function simple_countdown($target_date = '2025-11-01 00:00:00') {
+    $target = new DateTime($target_date, new DateTimeZone('Asia/Tokyo'));
+    $now = new DateTime('now', new DateTimeZone('Asia/Tokyo'));
+    
+    if ($now >= $target) {
+        return array(
+            'days' => '00',
+            'hours' => '00',
+            'minutes' => '00',
+            'seconds' => '00'
+        );
+    }
+    
+    $diff = $now->diff($target);
+    
+    return array(
+        'days' => sprintf('%02d', $diff->days),
+        'hours' => sprintf('%02d', $diff->h),
+        'minutes' => sprintf('%02d', $diff->i),
+        'seconds' => sprintf('%02d', $diff->s)
+    );
+}
+?>
