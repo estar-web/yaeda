@@ -427,9 +427,11 @@ main {
 ヘッダー
 =================================== */
 .header {
-    width: 100vw;
+    width: calc(100vw - 56px * 2);
     position: fixed;
     z-index: 101;
+    left: 50%;
+    translate: -50% 0;
 }
 
 #header .inner {
@@ -468,6 +470,10 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+    .header {
+        width: calc(100vw - 20px * 2);
+    }
+
     #header .logo {
         width: 19%;
         margin: 20px 12px 20px 20px;

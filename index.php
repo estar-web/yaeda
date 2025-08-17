@@ -9,31 +9,14 @@
     <?php get_header(2); ?>
 
     <div class="p-rule">
-        <a href="<?php echo home_url(); ?>/kickboard/" class="p-rule__link">特定小型原付とは？ルールを詳しく見る→</a>
-    </div>
-
-    <!-- ポップアップ -->
-    <!-- <div class="bg_onetime_popup">
-        <div class="onetime_popup">
-            <div class="onetime_popup_title">
-                <span class="onetime_popup_title_close"></span>
-                <a href="https://hasegawa-online.jp/products/yadea-ks6pro" target="_blank">
-                    <img src="<
-                    ?php echo get_template_directory_uri(); ?>/img/banner/pc_ks6pro.jpg" alt="">
-                </a>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- <div class="bnr_right-bottom">
-        <div class="bnr_right-bottm_inner">
-            <span class="bnr_right-bottom_close"></span>
-            <a href="https://hasegawa-online.jp/collections/hnt-01" target="_blank">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/banner/pc_hnt.jpg" alt="" class="bnr_pc">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/banner/sp_hnt.jpg" alt="" class="bnr_sp">
+        <div class="p-rule__wrap">
+            <p class="p-rule__text">最新型電動バイク「PORTA」登場</p>
+            <a href="<?php echo home_url(); ?>/kickboard/" class="p-rule__link">
+                詳細を見る
+            <img src="<?php echo get_template_directory_uri(); ?>/img/top/icon-btn.svg" alt="アイコン：右矢印" width="20" height="20" loading="lazy" decoding="async">
             </a>
         </div>
-    </div> -->
+    </div>
 
     <div class="wrapper" id="smoothScroll" data-scroll-container>
         <main class="noto" data-scroll-section>
@@ -383,13 +366,13 @@
 
 
 
+    <!-- スクロール要素の表示/非表示制御 -->
     <script>
         jQuery(function () {
-
             var footer = $('.sec05').innerHeight(); // footerの高さを取得
 
-            window.onscroll = function () {
-                var point = window.pageYOffset; // 現在のスクロール地点 
+            $(window).on('scroll', function () {
+                var point = $(window).scrollTop(); // 現在のスクロール地点 
                 var docHeight = $(document).height(); // ドキュメントの高さ
                 var dispHeight = $(window).height(); // 表示領域の高さ
 
@@ -398,7 +381,7 @@
                 } else {
                     $('.scroll').removeClass('is-hidden'); //footerより上にスクロールしたらis-hiddenを削除
                 }
-            };
+            });
         });
     </script>
 
