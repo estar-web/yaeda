@@ -33,15 +33,6 @@
       </div>
       <p class="po-fv__text">最新型電動バイク<br class="u-show">2025年11月1日発売予定</p>
     </div>
-    <div id="js-cta" class="po-fv__cta">
-      <a href="" class="po-fv__btn">
-        購入する（準備中）
-        <img src="<?php echo get_template_directory_uri(); ?>/img/porta/icon-btn.svg" alt="アイコン：三角形" width="20" height="20" loading="lazy" decoding="async">
-      </a>
-      <p class="po-fv__copy">
-        この製品に関するお問い合わせは、<a href="<?php echo home_url('/contact'); ?>" class="po-fv__link">こちら</a> からお送りください。
-      </p>
-    </div>
     <p class="noto po-fv__scroll">scroll</p>
   </div>
 
@@ -217,6 +208,15 @@
 </main>
 
 <footer class="l-footer">
+  <div id="js-cta" class="p-cta">
+    <a href="" class="p-cta__btn">
+      購入する（準備中）
+      <img src="<?php echo get_template_directory_uri(); ?>/img/porta/icon-btn.svg" alt="アイコン：三角形" width="20" height="20" loading="lazy" decoding="async">
+    </a>
+    <p class="p-cta__copy">
+      この製品に関するお問い合わせは、<a href="<?php echo home_url('/contact'); ?>" class="p-cta__link">こちら</a> からお送りください。
+    </p>
+  </div>
   <h2 class="l-footer__title">PORTA</h2>
   <p class="l-footer__copyright">&copy; 2025 YADEA</p>
   <script src="<?php echo get_template_directory_uri(); ?>/js/countdown.js" defer></script>

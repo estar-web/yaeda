@@ -8,16 +8,16 @@
 <body class="noto">
     <?php get_header(2); ?>
 
-    <div class="p-rule">
+    
+    <a href="<?php echo home_url(); ?>/porta/" class="p-rule frame-link">
         <div class="p-rule__wrap">
             <p class="p-rule__text">最新型電動バイク「PORTA」登場</p>
-            <a href="<?php echo home_url(); ?>/porta/" class="p-rule__link">
+            <span class="p-rule__link">
                 詳細を見る
-            <img src="<?php echo get_template_directory_uri(); ?>/img/top/icon-btn.svg" alt="アイコン：右矢印" width="20" height="20" loading="lazy" decoding="async">
-            </a>
+                <img src="<?php echo get_template_directory_uri(); ?>/img/top/icon-btn.svg" alt="アイコン：右矢印" width="20" height="20" loading="lazy" decoding="async">
+            </span>
         </div>
-    </div>
-
+    </a>
     <div class="wrapper" id="smoothScroll" data-scroll-container>
         <main class="noto" data-scroll-section>
             <!-- 動画 -->
@@ -25,6 +25,8 @@
                 playsinline></video>
             <!-- /動画 -->
             <div class="bg_gra">
+                <a href="<?php echo home_url(); ?>/porta/" class="bg_gra__link--left frame-link"></a>
+                <a href="<?php echo home_url(); ?>/porta/" class="bg_gra__link--right frame-link"></a>
                 <div class="fv">
                     <div class="top_inner">
                         <h1 class="fv_ttl yano">ELECTRIFY<br>YOUR LIFE</h1>

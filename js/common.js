@@ -153,3 +153,24 @@ function switchViewport() {
 addEventListener("resize", switchViewport, false);
 switchViewport();
 
+// バーのホバーアニメーション
+// デバッグ用のコード
+// DOMContentLoadedではなくloadを使用
+window.addEventListener('load', () => {
+  const frameLinks = document.querySelectorAll('.frame-link');
+  console.log('要素の数:', frameLinks.length);
+  
+  frameLinks.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      frameLinks.forEach(frameLink => {
+        frameLink.classList.add('add-hover');
+      });
+    });
+    
+    link.addEventListener('mouseleave', () => {
+      frameLinks.forEach(frameLink => {
+        frameLink.classList.remove('add-hover');
+      });
+    });
+  });
+});
