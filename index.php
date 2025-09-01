@@ -9,7 +9,7 @@
     <?php get_header(2); ?>
 
     
-    <a href="<?php echo home_url(); ?>/porta/" class="p-rule frame-link">
+    <a href="<?php echo home_url(); ?>/porta-lp/" class="p-rule frame-link">
         <div class="p-rule__wrap">
             <p class="p-rule__text">最新型電動バイク「PORTA」登場</p>
             <span class="p-rule__link">
@@ -25,8 +25,8 @@
                 playsinline></video>
             <!-- /動画 -->
             <div class="bg_gra">
-                <a href="<?php echo home_url(); ?>/porta/" class="bg_gra__link--left frame-link"></a>
-                <a href="<?php echo home_url(); ?>/porta/" class="bg_gra__link--right frame-link"></a>
+                <a href="<?php echo home_url(); ?>/porta-lp/" class="bg_gra__link--left frame-link js-bar"></a>
+                <a href="<?php echo home_url(); ?>/porta-lp/" class="bg_gra__link--right frame-link js-bar"></a>
                 <div class="fv">
                     <div class="top_inner">
                         <h1 class="fv_ttl yano">ELECTRIFY<br>YOUR LIFE</h1>

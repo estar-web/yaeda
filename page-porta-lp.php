@@ -1,7 +1,12 @@
-<?php get_header(); ?>
+<?php
+get_header();
+wp_head();
+?>
 <header class="po-header">
   <div class="po-header__inner">
-    <img src="<?php echo get_template_directory_uri(); ?>/img/common/logo.svg" alt="ロゴ：YEDEA" width="110" height="30" loading="lazy" decoding="async">
+    <a href="<?php echo home_url(); ?>" class="po-header__link">
+      <img src="<?php echo get_template_directory_uri(); ?>/img/common/logo.svg" alt="ロゴ：YEDEA" width="110" height="30" loading="lazy" decoding="async">
+    </a>
   </div>
 </header>
 <main class="l-main">
@@ -86,58 +91,70 @@
               <dd class="po-spec__data">PORTA</dd>
             </div>
             <div class="po-spec__wrap">
-              <dt class="po-spec__label">モーター</dt>
-              <dd class="po-spec__data">定格出力 400W</dd>
-            </div>
-            <div class="po-spec__wrap">
-              <dt class="po-spec__label">最大航続距離</dt>
-              <dd class="po-spec__data">40km※</dd>
-            </div>
-            <div class="po-spec__wrap">
-              <dt class="po-spec__label">サスペンション</dt>
-              <dd class="po-spec__data">フロント/リアサスペンション</dd>
-            </div>
-            <div class="po-spec__wrap">
-              <dt class="po-spec__label">タイヤ</dt>
-              <dd class="po-spec__data">フロント: 2.75-8 リア: 60/100-10 タイヤ/リアサスペンション</dd>
-            </div>
-            <div class="po-spec__wrap">
-              <dt class="po-spec__label">重量</dt>
-              <dd class="po-spec__data">55kg</dd>
-            </div>
-            <div class="po-spec__wrap">
-              <dt class="po-spec__label">ディスプレイ</dt>
-              <dd class="po-spec__data">5LEDディスプレイ</dd>
-            </div>
-          </dl>
-          <dl class="po-spec__list">
-            <div class="po-spec__wrap">
               <dt class="po-spec__label">バッテリー</dt>
               <dd class="po-spec__data">48V 24Ah</dd>
             </div>
             <div class="po-spec__wrap">
               <dt class="po-spec__label">最高速度</dt>
-              <dd class="po-spec__data">35km</dd>
+              <dd class="po-spec__data">35km ※法定速度30km/h</dd>
             </div>
             <div class="po-spec__wrap">
               <dt class="po-spec__label">コントローラ</dt>
               <dd class="po-spec__data">YADEA TTFARインテリジェントドライビング電子制御コア</dd>
             </div>
             <div class="po-spec__wrap">
-              <dt class="po-spec__label">ブレーキ</dt>
-              <dd class="po-spec__data">フロント/リアドラムブレーキ</dd>
+              <dt class="po-spec__label">タイヤ</dt>
+              <dd class="po-spec__data">フロント: 2.75 （タイヤ幅 2.75 インチ） 8 （リムサイズ 8 インチリム） リア: 60 （タイヤ幅 60mm ））/100 （扁平率 10 （リムサイズ 10 イン チリム）</dd>
+            </div>
+            <div class="po-spec__wrap">
+              <dt class="po-spec__label">重量</dt>
+              <dd class="po-spec__data">49.5kg</dd>
+            </div>
+            <div class="po-spec__wrap">
+              <dt class="po-spec__label">防水等級</dt>
+              <dd class="po-spec__data">IPX6</dd>
+            </div>
+            <div class="po-spec__wrap">
+              <dt class="po-spec__label">最大荷重</dt>
+              <dd class="po-spec__data">105kg</dd>
+            </div>
+            <div class="po-spec__wrap">
+              <dt class="po-spec__label">カラー</dt>
+              <dd class="po-spec__data">ミントグリーン</dd>
+            </div>
+          </dl>
+          <dl class="po-spec__list">
+            <div class="po-spec__wrap">
+              <dt class="po-spec__label">区分</dt>
+              <dd class="po-spec__data">原付一種</dd>
+            </div>
+            <div class="po-spec__wrap">
+              <dt class="po-spec__label">モーター</dt>
+              <dd class="po-spec__data">定格出力 500W</dd>
+            </div>
+            <div class="po-spec__wrap">
+              <dt class="po-spec__label">最大航続距離</dt>
+              <dd class="po-spec__data">60km<span class="po-spec__data--small">※</span></dd>
+            </div>
+            <div class="po-spec__wrap">
+              <dt class="po-spec__label">サスペンション</dt>
+              <dd class="po-spec__data">フロント/リアサスペンション</dd>
             </div>
             <div class="po-spec__wrap">
               <dt class="po-spec__label">充電時間</dt>
-              <dd class="po-spec__data">6-7h</dd>
+              <dd class="po-spec__data">5-6h</dd>
             </div>
             <div class="po-spec__wrap">
               <dt class="po-spec__label">サイズ</dt>
-              <dd class="po-spec__data">1470mm×680mm×1005mm</dd>
+              <dd class="po-spec__data">1480mm×680mm×1000mm</dd>
             </div>
             <div class="po-spec__wrap">
-              <dt class="po-spec__label">ライト</dt>
-              <dd class="po-spec__data">LEDヘッドライト/リア/ブレーキ/ウィンカー/ナンバープレートライト</dd>
+              <dt class="po-spec__label">登坂能力</dt>
+              <dd class="po-spec__data">17.6%</dd>
+            </div>
+            <div class="po-spec__wrap">
+              <dt class="po-spec__label">フレーム素材</dt>
+              <dd class="po-spec__data">鉄</dd>
             </div>
           </dl>
         </div>
@@ -209,8 +226,8 @@
 
 <footer class="l-footer">
   <div id="js-cta" class="p-cta">
-    <a href="" class="p-cta__btn">
-      購入する（準備中）
+    <a href="https://hasegawa-mobility.co.jp/products/porta-ebike?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web" target="_blank" class="p-cta__btn" rel="noopener noreferrer">
+      購入する（予約受付中）
       <img src="<?php echo get_template_directory_uri(); ?>/img/porta/icon-btn.svg" alt="アイコン：三角形" width="20" height="20" loading="lazy" decoding="async">
     </a>
     <p class="p-cta__copy">
@@ -221,5 +238,5 @@
   <p class="l-footer__copyright">&copy; 2025 YADEA</p>
   <script src="<?php echo get_template_directory_uri(); ?>/js/countdown.js" defer></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/porta.js" defer></script>
-  <?php wp_footer(); ?>
 </footer>
+<?php wp_footer(); ?>

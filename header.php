@@ -46,7 +46,7 @@
         type="text/css" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/locomotive-scroll.min.css"
         type="text/css" />
-    <?php if (is_page('porta')) : ?>
+    <?php if (is_page('porta-lp')) : ?>
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/porta.css" type="text/css" />
     <?php endif; ?>
 

@@ -159,14 +159,14 @@ switchViewport();
 window.addEventListener('load', () => {
   const frameLinks = document.querySelectorAll('.frame-link');
   console.log('要素の数:', frameLinks.length);
-  
+
   frameLinks.forEach(link => {
     link.addEventListener('mouseenter', () => {
       frameLinks.forEach(frameLink => {
         frameLink.classList.add('add-hover');
       });
     });
-    
+
     link.addEventListener('mouseleave', () => {
       frameLinks.forEach(frameLink => {
         frameLink.classList.remove('add-hover');
@@ -174,3 +174,21 @@ window.addEventListener('load', () => {
     });
   });
 });
+
+
+
+// use a script tag or an external JS file
+document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to('.js-bar',{
+    width: 0,
+    scrollTrigger:{
+      trigger:'.js-bar',
+      start:'top top',
+      end:'center top',
+      scrub:true,
+    }
+  })
+});
+

@@ -143,7 +143,8 @@
 
         <p class="copy">&copy; 2023 YADEA</p>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script>
         // フッターに到達したタイミングでバナーを非表示に
         $(function() {

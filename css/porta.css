@@ -39,7 +39,7 @@
 .l-inner {
   width: min(100%, calc(1328px + 20px * 2));
   margin-inline: auto;
-  padding-inline: 20px;  
+  padding-inline: 20px;
 }
 
 
@@ -162,6 +162,16 @@
   gap: 16px;
   color: #fff;
   font-weight: 700;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .p-cta__btn {
+    transition: opacity 0.3s ease 0s;
+  }
+
+  .p-cta__btn:hover {
+    opacity: 0.7;
+  }
 }
 
 .p-cta__copy {
@@ -314,8 +324,11 @@
 }
 
 .po-spec__list {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+  display: grid;
+  grid-template-rows:subgrid;
+  grid-row: span 9;
   gap: 24px;
 }
 
@@ -337,6 +350,11 @@
 .po-spec__data {
   line-height: 2;
   width: calc(100% - 160px - 16px);
+}
+
+.po-spec__data--small{
+  font-size: 8px;
+  vertical-align: top;
 }
 
 .po-spec__text {
@@ -424,24 +442,26 @@
   font-size: 12px;
 }
 
-.u-show{
+.u-show {
   display: none;
 }
 
 
 @media screen and (max-width: 768px) {
-  .c-title__jp{
+  .c-title__jp {
     font-size: 14px;
   }
-  .l-footer__title{
+
+  .l-footer__title {
     translate: 0 14px;
   }
+
   .po-fv {
     height: 700px;
     background-image: url(../img/porta/bg-fv-sp.png);
   }
 
-  .po-fv__contents{
+  .po-fv__contents {
     width: 100%;
   }
 
@@ -458,13 +478,13 @@
     font-size: 14px;
   }
 
-  .po-fv__text{
+  .po-fv__text {
     font-size: 20px;
     text-decoration: none;
     position: relative;
   }
 
-  .po-fv__text::after{
+  .po-fv__text::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -474,7 +494,7 @@
     left: 0;
   }
 
-  .p-cta{
+  .p-cta {
     left: 0;
     padding: 12px 20px;
     gap: 8px;
@@ -484,25 +504,25 @@
     transition: translate 0.3s ease-out 0s;
   }
 
-  .p-cta.add-show{
+  .p-cta.add-show {
     translate: 0 0;
   }
 
-  .p-cta__copy{
+  .p-cta__copy {
     font-size: 11px;
   }
 
-  .po-fv__scroll{
+  .po-fv__scroll {
     left: initial;
     right: 20px;
     bottom: 20px;
   }
-  
-  .po-about{
+
+  .po-about {
     padding-block: 64px 96px;
   }
 
-  .po-about__movie{
+  .po-about__movie {
     margin-top: 48px;
   }
 
@@ -511,20 +531,20 @@
     gap: 40px;
   }
 
-  .po-about__text{
+  .po-about__text {
     font-size: 14px;
   }
 
-  .po-spec{
+  .po-spec {
     padding-block: 64px 96px;
   }
 
-  .po-spec__contents{
+  .po-spec__contents {
     margin-top: 48px;
     margin-left: 0;
   }
 
-  .po-spec__item{
+  .po-spec__item {
     grid-template-columns: 1fr;
     gap: 16px;
   }
@@ -532,25 +552,25 @@
   .po-spec__list {
     gap: 16px;
   }
-  
+
   .po-spec__wrap {
-  gap: 4px;
-  flex-direction: column;
-  padding-bottom: 16px;
+    gap: 4px;
+    flex-direction: column;
+    padding-bottom: 16px;
   }
-  
+
   .po-spec__label {
-  width: 100%;
-}
-
-.po-spec__data {
     width: 100%;
-  
   }
-  
-  
 
-  .u-show{
+  .po-spec__data {
+    width: 100%;
+
+  }
+
+
+
+  .u-show {
     display: block;
   }
 }
